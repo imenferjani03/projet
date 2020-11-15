@@ -1,0 +1,31 @@
+
+<h1 class="h1style">Liste des clients</h1>
+<br>
+<table style="color: black;font-size: 1em;" mdbTable class="table table-bordered">
+    <thead style="color: black;font-size: 1em;">
+      <tr>
+        <th >Nom</th>
+        <th>Adresse</th>
+        <th>Téléphone</th>
+        <th>Action</th>
+        
+       
+      </tr>
+    </thead>
+    <tbody>
+      
+      <tr *ngFor="let client of clients">
+       
+        <td>{{ client.nom }} {{ client.prenom }}</td>
+        <td>{{ client.adresse }}  </td>
+        <td>{{ client.phone }} </td>
+        <td>
+         
+          <button type="button" class="btn btndelete" (click)="delete(client.id)"><i class="fa fa-trash"></i>
+          </button>
+      </td>
+      
+      </tr>
+   
+    </tbody>
+  </table>
